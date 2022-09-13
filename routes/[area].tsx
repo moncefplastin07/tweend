@@ -5,7 +5,7 @@ import TopicCard from "../components/TopicCard.tsx";
 import ToggleDisplayThemeButton from "../islands/ToggleDisplayThemeButton.tsx"
 export const handler: Handlers = {
   async GET(_, ctx) {
-    const resp = await fetch(`https://twtrends-api.herokuapp.com/`);
+    const resp = await fetch(`https://twtrends-api.herokuapp.com/${ctx.params.area}`);
     if (resp.status === 404) {
       return ctx.render(null);
     }
@@ -19,12 +19,12 @@ export default function Home({ data }: PageProps) {
   return (
     <div class="transition duration-500 ease-in-out p-4 dark:bg-[#1e293b] dark:text-gray-100">
       <Head>
-        <title>The most popular topics on Twitter</title>
+        <title>{data.area} Tietter trend</title>
       </Head>
       <ToggleDisplayThemeButton/>
       <div className={`mx-auto max-w-screen-lg`}>
         <p className={`p-5`}><b className={`bg-cyan-300 p-5 rounded-lg text-xl`}>Tweend</b> twitter trends tracker</p>
-        <p className={`p-10 text-xl text-center`}>The most popular topics on Twitter </p>
+        <p className={`p-10 text-xl text-center`}>The most popular topics on Twitter in {data.area}</p>
         {data.trends.map((updates) => {
           return (
             <div> 

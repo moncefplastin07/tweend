@@ -3,12 +3,14 @@
 // This file is automatically updated during development when running `dev.ts`.
 
 import config from "./deno.json" assert { type: "json" };
-import * as $0 from "./routes/index.tsx";
+import * as $0 from "./routes/[area].tsx";
+import * as $1 from "./routes/index.tsx";
 import * as $$0 from "./islands/ToggleDisplayThemeButton.tsx";
 
 const manifest = {
   routes: {
-    "./routes/index.tsx": $0,
+    "./routes/[area].tsx": $0,
+    "./routes/index.tsx": $1,
   },
   islands: {
     "./islands/ToggleDisplayThemeButton.tsx": $$0,
