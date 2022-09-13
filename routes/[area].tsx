@@ -19,7 +19,7 @@ export default function Home({ data }: PageProps) {
   return (
     <div class="transition duration-500 ease-in-out p-4 dark:bg-[#1e293b] dark:text-gray-100">
       <Head>
-        <title>{data.area} Tietter trend</title>
+        <title>{data.area} Twitter trend</title>
       </Head>
       <ToggleDisplayThemeButton/>
       <div className={`mx-auto max-w-screen-lg`}>
