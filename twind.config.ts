@@ -3,13 +3,12 @@ import * as colors from "twind/colors";
 export default {
   selfURL: import.meta.url,
   darkMode: "class",
-  theme:{
-    extend:{
-      colors:{
+  theme: {
+    extend: {
+      colors: {
         cyan: colors.cyan,
-        slate: colors.coolGray
-        
-      }
-    }
-  }
+        slate: colors.coolGray,
+      },
+    },
+  },
 } as Options;
