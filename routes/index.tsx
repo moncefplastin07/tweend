@@ -6,7 +6,7 @@ import ListOfCountries from "../islands/ListOfCountries.tsx";
 import ToggleDisplayThemeButton from "../islands/ToggleDisplayThemeButton.tsx";
 export const handler: Handlers = {
   async GET(_, ctx) {
-    const resp = await fetch(`https://twtrends-api.herokuapp.com/`);
+    const resp = await fetch(`https://tweend-api.deno.dev/`);
     if (resp.status === 404) {
       return ctx.render(null);
     }

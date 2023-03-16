@@ -7,7 +7,7 @@ import ListOfCountries from "../islands/ListOfCountries.tsx";
 export const handler: Handlers = {
   async GET(_, ctx) {
     const resp = await fetch(
-      `https://twtrends-api.herokuapp.com/${ctx.params.area}`,
+      `https://tweend-api.deno.dev/${ctx.params.area}`,
     );
     if (resp.status === 404) {
       return ctx.render(null);
